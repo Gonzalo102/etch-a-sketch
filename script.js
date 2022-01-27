@@ -1,7 +1,10 @@
 let color;
 
+//selectors
 const container = document.getElementById("container");
 const button = document.getElementById("button");
+
+//event listeners
 button.addEventListener('click', newGrid);
 window.addEventListener("load", setDefaultGrid);
 window.addEventListener("load", createButtons);
@@ -42,7 +45,6 @@ function makeGrid(rows, cols) {
 }
 
 function erraseGrid() {
-// Eliminando todos los hijos de un elemento
 	while (container.firstChild) {
   container.removeChild(container.firstChild);
   }
@@ -99,7 +101,6 @@ function createButtons() {
     erraseButton.innerText = 'Errase';
     erraseButton.setAttribute('id','erraseButton');
     erraseButton.addEventListener("click", changeColor);
-    
 }
 
 function random_rgba() {
